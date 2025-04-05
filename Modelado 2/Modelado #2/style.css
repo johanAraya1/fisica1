@@ -1,0 +1,81 @@
+/* Estilos generales de la página */
+body {
+    margin: 0; /* Elimina márgenes por defecto del navegador */
+    padding: 0; /* Elimina padding por defecto */
+    font-family: Arial, sans-serif; /* Fuente general de la página */
+    background: url('fondo-espacial-oscuro.jpg') no-repeat center center fixed; /* Fondo tipo espacio, centrado y fijo */
+    background-size: cover; /* Escala la imagen de fondo para cubrir toda la pantalla */
+    text-align: center; /* Centra el texto de la página */
+}
+
+/* Título principal */
+h1 {
+    color: #ffffff; /* Texto blanco */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Contenedor de los controles (input y botón) */
+.controls {
+    margin: 20px auto; /* Centrado y espacio alrededor */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 15px 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Ajuste al contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra ligera para profundidad */
+}
+
+/* Estilos para los campos de entrada de texto */
+input {
+    padding: 5px; /* Espaciado interno */
+    width: 60px; /* Ancho fijo para mejor alineación */
+    margin: 0 10px; /* Espaciado horizontal entre inputs */
+}
+
+/* Estilo del botón "Iniciar" */
+button {
+    background-color: #007bff; /* Azul brillante */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 5px 12px; /* Espaciado interno */
+    font-size: 15px; /* Tamaño del texto */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo "mano" al pasar encima */
+}
+
+/* Cambia el color del botón al pasar el mouse */
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+/* Contenedor para centrar el canvas */
+.canvas-container {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    margin-top: 20px; /* Separación del contenido anterior */
+}
+
+/* Estilos para el canvas de la simulación */
+canvas {
+    width: 90vw; /* El canvas ocupa el 90% del ancho de la ventana */
+    max-width: 1400px; /* Máximo ancho permitido */
+    height: auto; /* Altura automática basada en el aspecto */
+    aspect-ratio: 15 / 7; /* Mantiene proporción 1500x700 */
+    border: 2px solid #ffffff; /* Borde blanco */
+    background-size: cover; /* Imagen de fondo del canvas cubre toda su área */
+    background-position: center; /* Fondo centrado */
+    display: block; /* Evita espacios innecesarios en línea */
+}
+
+/* Cuadros informativos de velocidad, posición, rebote */
+#info, #estado {
+    display: inline-block; /* Se alinean uno al lado del otro */
+    background-color: #222; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    margin: 10px; /* Separación entre cuadros */
+    font-family: monospace; /* Fuente tipo código para mejor legibilidad de datos */
+    font-size: 14px; /* Tamaño del texto */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Define el tipo de documento como HTML5 -->
+<html lang="es">
+<!-- Indica que el idioma del contenido es español -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Especifica la codificación de caracteres, necesaria para que se muestren bien acentos y caracteres especiales -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Hace que la página sea responsive (se adapte a distintos tamaños de pantalla) -->
+
+  <title>Simulación de Rebote</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Enlace al archivo de estilos CSS externo -->
+</head>
+
+<body>
+  <!-- Cuerpo del documento HTML (lo que se ve en pantalla) -->
+
+  <h1>Simulación de Rebote de una Partícula</h1>
+  <!-- Título principal visible en la página -->
+
+  <div class="controls">
+    <!-- Contenedor para los controles de entrada del usuario -->
+
+    <label for="velocidad">Velocidad Inicial (m/s):</label>
+    <!-- Etiqueta para el input de velocidad -->
+    <input type="number" id="velocidad" value="20" min="1" required />
+    <!-- Campo numérico para que el usuario introduzca la velocidad inicial -->
+
+    <label for="angulo">Ángulo (°):</label>
+    <!-- Etiqueta para el input del ángulo de lanzamiento -->
+    <input type="number" id="angulo" value="20" min="0" max="90" required />
+    <!-- Campo numérico para que el usuario introduzca el ángulo del lanzamiento -->
+
+    <button onclick="iniciarSimulacion()">Iniciar</button>
+    <!-- Botón que ejecuta la simulación llamando a la función JavaScript -->
+  </div>
+
+  <div class="canvas-container">
+    <!-- Contenedor para centrar el canvas visualmente -->
+    <canvas id="canvas"></canvas>
+    <!-- Elemento donde se dibuja la simulación física -->
+  </div>
+
+  <div class="paneles-info">
+    <!-- Contenedor para los paneles de información -->
+
+    <div id="info" class="cuadro-info"></div>
+    <!-- Cuadro que mostrará los resultados después del rebote: velocidad, ángulo -->
+
+    <div id="estado" class="cuadro-info"></div>
+    <!-- Cuadro que muestra la información en tiempo real: tiempo, posición, velocidad -->
+  </div>
+
+  <script src="simulacion.js"></script>
+  <!-- Enlace al archivo JavaScript que contiene toda la lógica de simulación -->
+</body>
+</html>
+
